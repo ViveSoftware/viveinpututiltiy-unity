@@ -163,6 +163,7 @@ namespace HTC.UnityPlugin.VRModuleManagement
 #endif
 
 #if VIU_OCULUSVR_1_32_0_OR_NEWER || VIU_OCULUSVR_1_36_0_OR_NEWER || VIU_OCULUSVR_1_37_0_OR_NEWER
+#if VIU_OCULUSVR_AVATAR
         private class RenderModelCreator : RenderModelHook.RenderModelCreator
         {
             private uint m_index = INVALID_DEVICE_INDEX;
@@ -250,7 +251,7 @@ namespace HTC.UnityPlugin.VRModuleManagement
                 return m_index == s_leftHandIndex || m_index == s_rightHandIndex;
             }
         }
-
+#endif
         private static OculusVRModule s_moduleInstance;
 #endif
 
